@@ -1,0 +1,32 @@
+UEs = 900:30:48000;
+plot(UEs,throughput(1,:),'r');
+hold on;
+plot(UEs,throughput(4,:),'b');
+hold on;
+plot(UEs,throughput(7,:),'m');
+hold on;
+plot(UEs,throughput(10,:),'k');
+hold on;
+plot(UEs,throughput(13,:),'g');
+ho
+plot(UEs,throughput(16,1:17),'d');
+hold on;
+plot(UEs,throughput(19,1:17),'o');
+hold on;
+plot(UEs,throughput(22,1:17),'x');
+hold on;
+plot(UEs,throughput(25,1:17),'s');
+hold on;
+plot(UEs,throughput(28,1:17),'^');
+hold on;
+xlabel('N');
+ylabel('throughput(packets/slot)');
+ylim([0,11])
+legend({'ana 1/\lambda = 120min','ana 1/\lambda = 60min','ana 1/\lambda = 30min','ana 1/\lambda = 12min','ana 1/\lambda = 5min','sim 1/\lambda = 120min','sim 1/\lambda = 60min','sim 1/\lambda = 30min','sim 1/\lambda = 12min','sim 1/\lambda = 5min'},'Location','northwest');
+%{
+xlabel('N');
+ylabel('throughput_111_101010(packets/slot)');
+legend({'sim inter-arrival time = 3min','ana inter-arrival time =
+3min'},'Location','northwest');
+%}
+set(findall(gca, 'Type', 'Line'),'LineWidth',2);
